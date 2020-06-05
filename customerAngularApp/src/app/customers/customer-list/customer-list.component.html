@@ -1,0 +1,92 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Full Name</th>
+        <th>EmailID</th>
+        <th>Phone No.</th>
+        <th>DOB</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of allCustomer">
+        <th scope="row">{{customer.CustomerID}}</th>
+        <td>{{customer.FirstName + " "+ customer.LastName}}</td>
+        <td>{{customer.EmailID}}</td>
+        <td>{{customer.MobileNo}}</td>
+        <td>{{customer.DOB}}</td>
+        <td>
+          <a class="btn" (click)="edit(customer)"  routerLink="/addcustomer">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td> 
+          <a class="btn text-danger" (click)="deleteCustomer(customer.CustomerID)">
+              <i class="fa fa-trash"></i>
+          </a>
+        </td>
+     
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/addcustomer">ADD</button>
+    <br><br><br><br><br><br>
+  <footer class="page-footer font-small blue pt-4">
+
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+    
+        <!-- Grid row -->
+        <div class="row">
+    
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+    
+            <!-- Content -->
+            <h5 class="text-uppercase">Customer Portal</h5>
+            <p>This Project is made by Aryan vikas Jain.</p>
+    
+          </div>
+          <!-- Grid column -->
+    
+          <hr class="clearfix w-100 d-md-none pb-3">
+    
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+    
+            <!-- Links -->
+            <h5 class="text-uppercase">Social</h5>
+    
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.facebook.com/avj.aryan"><i class="fa fa-facebook-official" style="font-size:24px; color:#3b5998"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/aryan_avj/"><i class="fa fa-instagram" style="font-size:24px; color:#E1306C"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/aryan-vikas-jain-9006a2189/"><i class="fa fa-linkedin-square" style="font-size:24px;color:#0077B5"></i></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCUlhNETntSETCQbGBPqZ19Q?view_as=subscriber"><i class="fa fa-youtube-play" style="font-size:24px;color:red"></i></a>
+              </li>
+            </ul>
+    
+          </div>   
+        </div>
+        <!-- Grid row -->
+    
+      </div>
+      <!-- Footer Links -->
+    
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="mailto: aryanvikasjain@gmail.com subject=Feedback ">aryanvikasjain@gmail.com</a>
+      </div>
+      <!-- Copyright -->
+    
+    </footer>

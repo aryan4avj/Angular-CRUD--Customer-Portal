@@ -1,0 +1,45 @@
+<h2>Register:</h2>
+<form [formGroup]="form" autocomplete="off">
+  
+    
+
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input placeholder="First Name" type="text" formControlName="FirstName" class="form-control" [(ngModel)]="service.currentCustomer.FirstName" required>
+        <div class="alert alert-danger" role="alert" *ngIf="FirstName.invalid && FirstName.touched">This Field is required.</div>
+        
+    </div>
+
+    <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input placeholder="Last Name" type="text" formControlName="LastName" class="form-control" [(ngModel)]="service.currentCustomer.LastName" >
+        <div class="alert alert-danger" role="alert" *ngIf="LastName.invalid && LastName.touched">This Field is required.</div>
+    </div>
+
+    <div class="form-group">
+        <label for="EmailID">EmailID</label>
+        <input placeholder="EmailID Address" type="EmailID" formControlName="EmailID" class="form-control" [(ngModel)]="service.currentCustomer.EmailID" >
+        <div>
+            <div class="alert alert-danger" role="alert" *ngIf="EmailID.invalid && EmailID.touched">EmailID is required and must be a valid EmailID address</div>
+            <!-- <div *ngIf="EmailID.required">required</div> -->
+        </div>    
+    </div>
+
+    <div class="form-group">
+        <label for="MobileNo">Phone No.</label>
+        <input placeholder="Phone No." type="tel" formControlName="MobileNo" class="form-control" [(ngModel)]="service.currentCustomer.MobileNo" >
+        <div class="alert alert-danger" role="alert" *ngIf="MobileNo.invalid && MobileNo.touched">PhoneNo is required (format: xxxx-xxx-xxxx)</div>
+    </div>
+
+    <div class="form-group">
+        <label for="DOB">Date Of Birth</label>
+        <input type="date" formControlName="DOB" class="form-control" [(ngModel)]="service.currentCustomer.DOB" >
+        <div class="alert alert-danger" role="alert" *ngIf="DOB.invalid && DOB.touched">This Field is required.</div>
+    </div>
+
+    <div class="form-group btn-group btn-group-lg">
+        <button [disabled]="form.invalid" class="btn btn-primary" [routerLink]="['/']" (click)="createAndUpdate(service.currentCustomer)" >Register</button>
+        <button class="btn btn-primary" (click)="clear()" >Clear</button>
+        <a [routerLink]="['/']" class="btn btn-link">Cancel</a>
+    </div>
+</form>
