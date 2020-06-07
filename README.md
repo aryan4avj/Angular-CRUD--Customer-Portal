@@ -3,6 +3,7 @@
 It is an Angular CRUD Web Application which maintains the data of employees of a company.
 In this user can create, read, update and delete information of an employee.
 It has API's which hits every time whenever the action is done.
+
 Steps innvolved in making this Project:-
 Step 1 — Mocking the Backend Using json-server
 Step 2 — Creating an Angular Module
