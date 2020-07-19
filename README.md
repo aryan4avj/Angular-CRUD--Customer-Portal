@@ -28,4 +28,8 @@ Step 10 — Create a Web API and database
 
 Step 11 — Now connect API with Angular Project.
 
+Screenshots:
+
 ![](screenshots/home.PNG)
+![](screenshots/api.PNG)
+![](screenshots/form.PNG)
