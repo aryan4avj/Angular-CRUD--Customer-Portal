@@ -28,4 +28,4 @@ Step 10 — Create a Web API and database
 
 Step 11 — Now connect API with Angular Project.
 
-![](ss.docx)
+![](screenshots/home.PNG)
